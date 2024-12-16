@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "defects_module"
+version = "0.0.1"
+description = "Defects module."
+authors = [
+]
+readme = "README.md"
+packages = [{include = "defects_module"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+ipython = "^8.8.0"
+numpy = "^1.24.1"
+qiskit = "^1.0.0"
+qiskit-aer = "^0.13.1"
+pymatching = "^2.1.0"
+sinter = "^1.10.0"
+plotly = "^5.13.0"
+pandas = ">=1.5.0"
+deprecated = "^1.2.14"
+shapely = "^2.0.4"
+networkx = ">=3.4.1"
+nbformat = "^5.10.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.mypy]
+ignore_missing_imports = true
+warn_unreachable = true
+
+[tool.ruff]
+line-length = 100
+lint.select = [
+    "D", # pydocstyle warnings
+    "E", # pycodestyle errors
+    "F", # pyflakes
+    "I", # isort
+    "RUF100", # unused noqa:
+    "W", # pycodestyle warnings
+    "B", # flake8 bugbear
+    "PL", # pylint
+]
+lint.pydocstyle = { convention = "google" }
+lint.extend-ignore = [
+    "D100",  # module docstrings
+    "D104",  # package docstrings
+    "D107",  # __init__() docstrings
+    "D105",  # magic method docstrings
+    "D415",  # first line ends with period, question mark, or exclamation point
+    ## We enforce these by code reviews.
+    "PLR2004", # Magic value used in comparison
+    "PLR0913", # Too many arguments in a function call
+    "PLR0911", # Too many return statements
+    "PLR0912", # Too many branches
+    "PLR0915", # Too many statements
+    # We should work to stop ignoring these
+    "D101",  # missing class docstring
+    "D102",  # missing method docstring
+    "D103",  # missing function docstring
+    "D205",  # 1 blank line required between summary line and description
+    "B008",  # Do not perform function call in argument defaults
+]
+# we ignore import order in __init__ files so we can control the order to avoid circular imports
+lint.per-file-ignores = {"__init__.py" = ["F401", "F403", "F405", "I"], "**/tests/*.py" = ["D", "E"]}
