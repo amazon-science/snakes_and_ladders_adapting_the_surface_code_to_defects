@@ -6,6 +6,8 @@ Examples on how to use this software can be found in the notebook `examples/snak
 
 READMEs can be found in the different submodules of this package. For more details you can e-mail *Catherine Leroux* [catilero@amazon.com].
 
+This repo is archived and will not be maintained.
+
 #### Authors:
 Catherine Leroux, 
 Sophia F. Lin, 
@@ -17,7 +19,11 @@ Joseph K. Iverson.
 
 ## Security
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+This repo won’t be updated in order to reproduce results as they appear in the paper.
+
+## Contributions 
+
+We do not accept external contributions.
 
 ## License
 
