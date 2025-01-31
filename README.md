@@ -9,7 +9,7 @@ READMEs can be found in the different submodules of this package. For more detai
 This repo is archived and will not be maintained.
 
 When using 'Snakes and Ladders: Adapting the surface code to defects', please cite our publication:
-"""
+```
 @article{leroux2024snakesladdersadaptingsurface,
 title={Snakes and Ladders: Adapting the surface code to defects},
 author={Catherine Leroux and Sophia F. Lin and Przemyslaw Bienias and Krishanu R. Sankar and Asmae Benhemou and Aleksander Kubica and Joseph K. Iverson},
@@ -17,7 +17,7 @@ journal={arXiv prepring arXiv:2412.11504},
 year={2024},
 doi={10.48550/arXiv.2412.11504}
 }
-"""
+```
 
 #### Authors:
 Catherine Leroux, 
